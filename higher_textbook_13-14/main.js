@@ -74,3 +74,4 @@ let str = '^xx axx ^zz bkk';
 str = '^xx axx ^zz bkk';
 result = str.match(/[\^]\w{2}/g)
 console.log(result);
+console.log('hi')

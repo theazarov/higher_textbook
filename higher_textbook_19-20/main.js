@@ -69,6 +69,6 @@ console.log(result);
 let str = '31.12.2025';
 Положите день в первый карман, месяц - во второй, а год - в третий.*/
 
-str = '31.12.2025'
-result = str.match(/(\d{2})+\.+(\d{2})+\.+(\d{4})/)
-console.log(result)
+str = "31.12.2025";
+result = str.match(/(\d{2})+\.+(\d{2})+\.+(\d{4})/);
+console.log(result);

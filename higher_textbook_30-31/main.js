@@ -36,3 +36,15 @@ console.log(Array.isArray(arr))
 arr = Array.from(elems)
 console.log(arr)
 console.log(Array.isArray(arr))
+
+/*Задача 2js.Sp.Cl.PaCn
+
+Даны абзацы:
+
+let elems = document.querySelectorAll('p');
+С помощью метода slice получите все абзацы, кроме первого и последнего.*/
+
+elems = document.querySelectorAll('p');
+arr = [...elems]
+arr = arr.slice(1, arr.length-1)
+console.log(arr)

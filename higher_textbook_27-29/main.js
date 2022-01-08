@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
 //Метод search в регулярных выражениях JavaScript:
 
-let str = 'a aa aaa aaaa aaaa';
-let result = str.search(/aaa/)
-console.log(result)
+let str = "a aa aaa aaaa aaaa";
+let result = str.search(/aaa/);
+console.log(result);
 
 /*Задача 1js.Sp.RE.MSch
 
@@ -13,15 +13,15 @@ console.log(result)
 let str = '1 23 456 789';
 Найдите позицию первого числа, состоящего из трех цифр.*/
 
-str = '1 23 456 789';
-result = str.search(/\d{3}/)
-console.log(result)
+str = "1 23 456 789";
+result = str.search(/\d{3}/);
+console.log(result);
 
 //Метод split в регулярных выражениях JavaScript:
 
-str = 'a-b+c-dk + e';
-result = str.split(/[+-]/)
-console.log(result)
+str = "a-b+c-dk + e";
+result = str.split(/[+-]/);
+console.log(result);
 
 /*Задача 1js.Sp.RE.MSp
 
@@ -32,9 +32,9 @@ let str = '2025-12-31 12:59:59';
 
 ['2025', '12', '31', '12', '59', '59'];*/
 
-str = '2025-12-31 12:59:59';
-result = str.split(/[ \-\:]/)
-console.log(result)
+str = "2025-12-31 12:59:59";
+result = str.split(/[ \-\:]/);
+console.log(result);
 
 //Головоломки в регулярных выражениях JavaScript:
 
@@ -42,17 +42,17 @@ console.log(result)
 
 Определите, что год находится в интервале от 1900 до 2100 с помощью одного только регулярного выражения.*/
 
-str = '2099'
-result = /^19|^20/.test(str)
-console.log(result)
+str = "2099";
+result = /^19|^20/.test(str);
+console.log(result);
 
 /*Задача 2js.Sp.RE.Pz
 
 Определите, что переданная строка является корректным временем вида часы:минуты. Часы и минуты не должны выходить за диапазон времени.*/
 
-str = '04:20'
-result = /^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$/.test(str)
-console.log(result)
+str = "04:20";
+result = /^(0[0-9]|1[0-9]|2[0-3]|[0-9]):[0-5][0-9]$/.test(str);
+console.log(result);
 
 /*Задача 3js.Sp.RE.Pz
 
@@ -63,6 +63,6 @@ console.log(result)
 
 Удалите одной регуляркой все слова из предложения, содержащие две одинаковые следующие друг за другом буквы.*/
 
-str = 'followw mme hhater'
-result = str.replace(/([а-яёa-z])\1/gi, '$1')
-console.log(result)
+str = "followw mme hhater";
+result = str.replace(/([а-яёa-z])\1/gi, "$1");
+console.log(result);

@@ -111,7 +111,7 @@ for (let input of inputs) {
 
   input.addEventListener("keydown", function (event) {
     if (event.keyCode == 13 && input.value === "cmd") {
-        input.value = "";
+      input.value = "";
       arr = [];
       map.delete(input);
     }

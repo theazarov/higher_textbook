@@ -59,12 +59,12 @@ let obj1 = { a: 1, b: 2, c: 3 };
 let obj2 = { a: 1, b: 2, c: 3 };
 let obj3 = { a: 1, b: 2, c: 3 };
 
-let myMap = new Map
+let myMap = new Map();
 
-myMap.set(obj1, arr1)
-myMap.set(obj2, arr2)
-myMap.set(obj3, arr3)
+myMap.set(obj1, arr1);
+myMap.set(obj2, arr2);
+myMap.set(obj3, arr3);
 
-console.log(myMap.get(obj1))
-console.log(myMap.get(obj2))
-console.log(myMap.get(obj3))
+console.log(myMap.get(obj1));
+console.log(myMap.get(obj2));
+console.log(myMap.get(obj3));

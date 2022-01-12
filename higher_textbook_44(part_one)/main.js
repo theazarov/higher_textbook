@@ -181,8 +181,11 @@ function clearArr(arrOne, arrTwo){
     }
 
     let set = new Set(arrOne)
+    set.add(arrOne[sum])
+    console.log(arrOne[sum])
     arrOne = [...set]
 
-    return arrOne, arrOne[sum](), arrTwo[sum]()
+    return arrOne
 }
-console.log(clearArr(getRundom(), getRundom()))
+let clear = clearArr(getRundom(), getRundom())
+console.log(clear)

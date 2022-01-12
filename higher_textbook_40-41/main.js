@@ -1,60 +1,60 @@
-'use strict';
+"use strict";
 
 //Перебор коллекций Set циклом:
 
-let set = new Set
+let set = new Set();
 
-set.add(1)
-set.add(2)
-set.add(3)
+set.add(1);
+set.add(2);
+set.add(3);
 
-for(let elem of set){
-    console.log(elem)
+for (let elem of set) {
+  console.log(elem);
 }
 
-set.clear
+set.clear;
 
-set.add(12)
-set.add(3)
-set.add(88)
+set.add(12);
+set.add(3);
+set.add(88);
 
-let result = new Number
+let result = new Number();
 
-for(let elem of set){
-    result += elem
+for (let elem of set) {
+  result += elem;
 }
 
-console.log(result)
+console.log(result);
 
 //Преобразование коллекций Set:
 
-let arr = [...set]
-console.log(arr)
-console.log(set)
+let arr = [...set];
+console.log(arr);
+console.log(set);
 
-arr = Array.from(set)
-console.log(arr)
+arr = Array.from(set);
+console.log(arr);
 
-arr = ['one', 2, 3];
+arr = ["one", 2, 3];
 
-set = new Set(arr)
-console.log(set)
+set = new Set(arr);
+console.log(set);
 
 /*Задача 2js.Sp.Cl.StCn
 
 Дан массив. Преобразуйте его в коллекцию.*/
 
-let myArr = ['one', '2', 3, '2', 2, 2]
+let myArr = ["one", "2", 3, "2", 2, 2];
 
-let mySet = new Set(myArr)
+let mySet = new Set(myArr);
 
-console.log(mySet)
+console.log(mySet);
 
-result = new Number()
+result = new Number();
 
-for(let elem of mySet){
-    if(typeof elem == "number"){
-        result+= elem
-    }
+for (let elem of mySet) {
+  if (typeof elem == "number") {
+    result += elem;
+  }
 }
-console.log(result)
+console.log(result);

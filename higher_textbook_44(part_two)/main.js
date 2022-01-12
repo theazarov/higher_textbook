@@ -259,6 +259,7 @@ for(let elem of obj){
 
 Дан массив. Переберите элементы этого массива через цикл for-of так, чтобы в каждой итерации в переменную elem записывался элемент массива, а в переменную key - ключ.*/
 
+/*
 let arr = ['one', 'two', 'three']
 
 let iterator = arr.entries()
@@ -266,6 +267,7 @@ let iterator = arr.entries()
 for(let [key, value] of iterator){
     console.log(key, value)
 }
+*/
 
 /*Задача :
 
@@ -300,3 +302,45 @@ console.log(result[sum]())
 
 Дана коллекция Map. Получите массив ее значений.*/
 
+/*
+let map = new Map
+
+map.set('1', 'one')
+map.set('2', 'two')
+map.set('3', 'three')
+
+map.get([Symbol.iterator], function *(){
+    for(let key in this){
+        yield key
+    }
+
+})
+
+for(let elem of map){
+    console.log(elem)
+}
+
+console.log(map.get('2'))
+
+let iterator = map.keys()
+
+for(let [key, value] of iterator){
+    console.log(value)
+}
+*/
+
+/*Задача :
+
+Дана коллекция Map. Получите массив ее ключей.*/
+
+let map = new Map
+
+map.set(1, 'one')
+map.set(2, 'two')
+
+let iterator = map.entries()
+
+for(let [key, value] of iterator){
+    console.log(key)
+    console.log(value)
+}

@@ -23,8 +23,6 @@ if (time === null) {
   localStorage.setItem("time", date);
 }
 
-console.log(time);
-
 /*Задача 2js.Sp.Sg.Bs
 
 По заходу пользователя на сайт запишите в локальное хранилище текущий момент времени. Затем по повторному заходу выведите, сколько прошло времени с предыдущего захода пользователя на сайт.*/
@@ -39,7 +37,6 @@ if (first === null) {
   let date = new Date().getTime();
   localStorage.setItem("last", date);
 }
-console.log(last - first);
 
 /*Задача 3js.Sp.Sg.Bs
 
@@ -58,6 +55,7 @@ if (!birthday) {
   input.addEventListener("keydown", function () {
     if (event.keyCode == 13) {
       localStorage.setItem("birthday", input.value);
+      input.remove()
     }
   });
   parent.appendChild(p);
@@ -66,8 +64,6 @@ if (!birthday) {
   let date = new Date();
   let formatDate =
     date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-  console.log(formatDate);
-  console.log(birthday);
 
   if (birthday == formatDate) {
     let p = document.createElement("p");
@@ -80,14 +76,40 @@ if (!birthday) {
 
 Дан инпут. По потери фокуса в этом инпуте сохраните его значение в локальное хранилище. При следующем заходе пользователя на страницу установите в инпуте сохраненный ранее текст.*/
 
-one = document.getElementById('one')
+let elem = document.getElementById('one')
+let getInput = localStorage.getItem('input')
 
-let oneValue = localStorage.getItem('one')
+if(getInput === null){
 
-one.addEventListener('blur', function (){
-    localStorage.setItem('one', one.value)
-})
+  elem.addEventListener('blur', function (){
+    localStorage.setItem('input', elem.value)
+  })
 
-if(!oneValue){
-    one.value = localStorage.getItem('one')
+} else if(getInput != null){
+  elem.value = getInput
 }
+
+/*Задача 5js.Sp.Sg.Bs
+
+Пользователь заходит на сайт, затем обновляет страницу, затем еще раз обновляет и так далее. Сделайте счетчик обновления страницы. Каждый раз при обновлении выводите значение счетчика на экран.*/
+
+let count = localStorage.getItem('count')
+
+if(count === null){
+  localStorage.setItem('count', 1)
+} else if(count >= 20){
+  localStorage.removeItem('count')
+}else if(count != null){
+  localStorage.setItem('count', Number(count)+1)
+} 
+console.log(count)
+
+/*Задача 6js.Sp.Sg.Bs
+
+Модифицируйте предыдущую задачу. Сделайте так, чтобы счетчик обнулялся после того, как дойдет до 100.*/
+
+/*Задача 7js.Sp.Sg.Bs
+
+Очистите хранилище. Проверьте, что все ранее установленные вами ключи пропали.*/
+
+localStorage.clear()
